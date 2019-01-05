@@ -5,8 +5,14 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
-var doubleArray;
-
+var doubleArray = function(array) {
+    var doubled = [];
+    for (var i = 0; i < array.length; i++) {
+      doubled.push(array[i] * 2);
+    }
+    return doubled;
+  };
+  
 /* #sumArrays
  *
  * Takes in two arrays of numbers and returns the sum of both arrays.
@@ -15,7 +21,13 @@ var doubleArray;
  * @param {Array}
  * @return {Number}
  */
-var sumArrays;
+var sumArrays = function(array1, array2){
+  finalSum = 0;
+for(var i = 0; i < array1.length; i++){
+    finalSum += array1[i] + array2[i];
+ }
+ return finalSum;
+}
 
 /* #stringCount
  *
@@ -24,7 +36,11 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function(stringTxt){
+  const nString = stringTxt.length;
+  return nString;
+}
+
 
 /* #arrayLength
  *
@@ -33,7 +49,10 @@ var stringCount;
  * @param {Array}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function(arrayLength){
+  const numberArray = arrayLength.length;
+  return numberArray;
+}
 
 /* #countAll
  *
@@ -42,7 +61,13 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arrayCount){
+    sum = 0;
+    for(var i = 0; i < arrayCount.length; i++){
+        sum += arrayCount[i];
+    }
+    return sum;
+}
 
 /* #countStrings
  *
@@ -51,7 +76,13 @@ var countAll;
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+var countStrings = function(stringArray){
+  var countArray = [];
+  for (var i = 0 ; i < stringArray.length ; i++){
+    countArray.push(stringArray[i].length);
+  }
+  return countArray;
+}
 
 /* #countAllStrings
  *
@@ -364,12 +395,12 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
-  sumArrays: null,
-  stringCount: null,
-  arrayLength: null,
-  countAll: null,
-  countStrings: null,
+  doubleArray: doubleArray,
+  sumArrays: sumArrays,
+  stringCount: stringCount,
+  arrayLength: arrayLength,
+  countAll: countAll,
+  countStrings: countStrings,
   countAllStrings: null,
   convertToArray: null,
   objectSize: null,
